@@ -18,6 +18,8 @@ namespace ExerciseC
             string[] words = text.Split(delimiterChars);
             IDictionary<string, int> wordCount = new Dictionary<string, int>();
 
+            Console.WriteLine(words.Length);
+
             for (int i = 0; i < words.Length; i++)
             {
                 bool exists = false;
