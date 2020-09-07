@@ -16,15 +16,15 @@ namespace ExerciseD
             string text = Console.ReadLine();
 
             char[] array = text.ToCharArray();
-            IDictionary<string, int> wordCount = new Dictionary<string, int>();
+            IDictionary<char, int> wordCount = new Dictionary<char, int>();
 
-            List<string> list = new List<string>(array);
+            List<char> list = new List<char>(array);
 
-            Console.WriteLine(words.Length);
+            Console.WriteLine(array.Length);
 
-            foreach (string chara in list.ToList())
+            foreach (char ch in list.ToList())
             {
-                var target = chara;
+                var target = ch;
                 int count = 0;
 
                 if (wordCount.ContainsKey(target))
@@ -50,7 +50,7 @@ namespace ExerciseD
 
             }
 
-            foreach (KeyValuePair<string, int> entry in wordCount)
+            foreach (KeyValuePair<char, int> entry in wordCount)
             {
                 Console.WriteLine(entry);
             }
